@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #232323;
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.placeholder-media {
+  position: relative;
+  background: linear-gradient(135deg, #184676 0%, #0F1437 100%);
+  overflow: hidden;
+}
+.placeholder-media::after {
+  content: 'Insert your picture / video here';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 12px, transparent 12px 24px);
+}
+.placeholder-media.dark::after {
+  background: linear-gradient(135deg, #232323 0%, #0F1437 100%);
+}
+.placeholder-media.brand::after {
+  background: linear-gradient(135deg, #fe5d14 0%, #de6906 100%);
+  color: #fff;
+}
